@@ -1,0 +1,362 @@
+body {
+    padding: 10px;
+    font-family: sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.triangle-down {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 40px solid #f00;
+    margin: -40px -20px 0px 0px;
+}
+
+.file {
+    opacity: 0;
+    width: 0.1px;
+    height: 0.1px;
+    position: absolute;
+}
+
+.file-input label {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 38px;
+    border-radius: 5px;
+    background: #11256b 0% 0% no-repeat padding-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform .2s ease-out;
+    margin-bottom: 20px;
+    margin-top: 25px;
+}
+
+.login .formBox form .row {
+    margin-top: 25px;
+}
+
+.login .formBox form .form-control {
+    background: #11256b 0% 0% no-repeat padding-box;
+    border: 1px solid #11256b;
+    border-radius: 5px;
+    height:55px;
+    color: #fff;
+    font-size: 19px;
+}
+
+.redBtn {
+    display: block;
+    width: 150px;
+    padding: 20px 0px;
+    text-decoration: none;
+    background: #e76c2f 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    color: #fff;
+    font: normal normal normal 22px/33px Poppins;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 65px;
+    text-align: center;
+    border: none;
+}
+
+.userForm {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.btn-info {
+    color: #fff !important;
+    background-color: #e76c2f !important;
+    border-color: #e76c2f;
+}
+
+.redBtn:hover {
+    text-decoration: none;
+    color: #fff !important;
+}
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #fff !important;
+    opacity: .9;
+    /* Firefox */
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #fff !important;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #fff;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+
+/* Hide default HTML checkbox */
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+
+/* The slider */
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+
+/* Rounded sliders */
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.header {
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 5rem;
+}
+
+.nav-link {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #475569;
+}
+
+.nav-link:hover {
+    color: #11256b;
+}
+
+.nav-logo {
+    font-size: 2.1rem;
+    font-weight: 500;
+    color: #11256b;
+}
+
+@media only screen and (max-width: 1050px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+    .nav-menu.active {
+        left: 0;
+    }
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+.ordersPage table a {
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+    background-color: #3c8cb9;
+    color: #ffffff;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.square {
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    margin-bottom: -5px;
+    margin-right: 10px;
+}
+
+.dropdown-check-list {
+    position: relative;
+}
+  .dropdown-check-list .anchor {
+    position: relative;
+    cursor: pointer;
+    display: block;
+    padding: 5px 50px 5px 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .dropdown-check-list .anchor:after {
+    position: absolute;
+    content: "";
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+    padding: 5px;
+    right: 10px;
+    top: 20%;
+    -moz-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+  }
+  
+  .dropdown-check-list .anchor:active:after {
+    right: 8px;
+    top: 21%;
+  }
+  
+  .dropdown-check-list ul.items {
+    padding: 2px;
+    display: none;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-top: none;
+    position: absolute;
+    background-color: #f3f3f3;
+    top: 5px;
+  }
+  
+  .dropdown-check-list ul.items li {
+    list-style: none;
+  }
+  
+  .dropdown-check-list.visible .anchor {
+    color: #0094ff;
+  }
+  
+  .dropdown-check-list.visible .items {
+    display: block;
+    position: absolute;
+    z-index: 100000000;
+    background-color: #fff;
+    padding: 10px;
+    top: 40px;
+
+  }
